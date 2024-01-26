@@ -80,40 +80,36 @@ class _TestPageState extends State<TestPage> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(50),
-
         child: Column(
+          
           children: [
-           
             Column(
+              children: [
+                Icon(
+                  Icons.security,
+                  size: 60,
+                ),
+                SizedBox(height: 8.0),
+                Text(
+                  "PIN LOGIN",
+                  style: GoogleFonts.poppins(fontSize: 20),
+                )
+              ],
+            ),
+            Expanded(child: Container()),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.security,
-                    size: 60,
-                  ),
-                  SizedBox(height: 8.0),
                   Text(
-                    "PIN LOGIN",
-                    style: GoogleFonts.poppins(fontSize: 20),
-                  )
+                    _text,
+                    style: GoogleFonts.poppins(
+                        fontSize: 21.0,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey),
+                  ),
                 ],
               ),
-              
-            Expanded(child: Container()),
-               Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                  
-                    Text(
-                      _text,
-                      style: GoogleFonts.poppins(
-                          fontSize: 21.0,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.grey),
-                    ),
-                  ],
-                ),
-              
             ),
             Expanded(child: Container()),
             for (int i = 0; i < 3; i++)
@@ -127,7 +123,6 @@ class _TestPageState extends State<TestPage> {
                   itemList[i * 3 + 2]
                 ],
               ),
-              
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
